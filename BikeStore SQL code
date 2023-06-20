@@ -1,6 +1,6 @@
 SELECT
       ord.order_id,
-	  CONCAT(cus.first_name, ' ', cus.last_name) AS 'customers',
+	  CONCAT(cus.first_name, ' ', cus.last_name) AS 'customers' #to put customers names into one column,
 	  cus.city,
 	  cus.state,
 	  ord.order_date,
@@ -10,7 +10,7 @@ SELECT
 	  cat.category_name,
 	  sto.store_name,
 	  CONCAT(sta.first_name,' ',sta.last_name) AS 'sales_rep'
-FROM sales.orders ord
+FROM sales.orders ord #Join all Tables together for easy analysis
 JOIN sales.customers cus
 ON ord.customer_id = cus.customer_id
 JOIN sales.order_items ite
