@@ -7,15 +7,15 @@ select * from bike_share_yr_1)
 -- Select statement to join CTE table and cost table to retrieve data
 select dteday
        ,season
-	   ,A.yr
-	   ,weekday
-	   ,hr
-	   ,rider_type
-	   ,riders
-	   ,price
-	   ,COGS
-	   ,revenue = riders * price
-	   ,profit = riders * price - COGS
+	,A.yr
+        ,weekday
+	,hr
+	,rider_type
+	,riders
+	,price
+	,COGS
+	,revenue = riders * price
+	,profit = riders * price - COGS
 from share a
 left join cost_table b
 on a.yr = b.yr
